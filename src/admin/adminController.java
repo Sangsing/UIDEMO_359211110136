@@ -11,10 +11,13 @@ import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+import sample.Main;
 
 import javax.swing.*;
 import java.net.URL;
@@ -240,6 +243,13 @@ public class adminController implements Initializable {
 
 
     }//saveStudent
+    @FXML
+    private void logOut(ActionEvent event) throws Exception {
+        ((Node)event.getSource()).getScene().getWindow().hide();
+        Stage primaryStage = new Stage();
+        Main m = new Main();
+        m.start(primaryStage);
+    }//logOut
 
 
 
